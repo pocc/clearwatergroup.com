@@ -16,8 +16,12 @@ export default {
       return assetResponse;
     }
 
-    // SPA fallback — serve index.html for client-side routing
-    const fallbackUrl = new URL("/demo/index.html", request.url);
-    return env.ASSETS.fetch(new Request(fallbackUrl, request));
+    // SPA fallback — serve index.html for client-side routing under /demo
+    if (url.pathname === "/demo" || url.pathname.startsWith("/demo/")) {
+      const fallbackUrl = new URL("/demo/index.html", request.url);
+      return env.ASSETS.fetch(new Request(fallbackUrl, request));
+    }
+
+    return assetResponse;
   },
 };
