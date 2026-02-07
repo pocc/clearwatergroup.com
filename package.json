@@ -4,13 +4,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && npm run build:static",
-    "build:static": "cp index.html dist/ && for dir in books contact faq sea-level-rise services team; do cp -r $dir dist/; done",
-    "preview": "wrangler pages dev dist",
+    "dev:worker": "wrangler dev",
+    "build": "vite build",
+    "preview": "npm run build && wrangler dev",
     "typecheck": "tsc --noEmit",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "wrangler d1 migrations apply clearwater-db --local",
-    "deploy": "npm run build && wrangler pages deploy dist"
+    "deploy": "npm run build && wrangler deploy"
   },
   "dependencies": {
     "drizzle-orm": "^0.39.0",
