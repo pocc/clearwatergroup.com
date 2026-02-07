@@ -1,12 +1,93 @@
+import { Link } from "react-router";
+
 export default function Home() {
   return (
-    <div className="mx-auto max-w-3xl px-6 py-16">
-      <h1 className="text-4xl font-bold tracking-tight text-gray-900">
-        Clearwater Group
-      </h1>
-      <p className="mt-4 text-lg text-gray-600">
-        Welcome to the new app. This is a placeholder homepage.
-      </p>
-    </div>
+    <>
+      {/* Hero */}
+      <section className="bg-slate-800 text-white py-20">
+        <div className="mx-auto max-w-5xl px-6 text-center">
+          <span className="inline-block rounded-full bg-teal-700 px-4 py-1 text-xs font-medium uppercase tracking-wider mb-6">
+            Since 1990
+          </span>
+          <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
+            Clearwater Group
+          </h1>
+          <p className="mt-4 text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
+            Expertise in Environmental, Resource, and Sustainability Consulting.
+          </p>
+          <Link
+            to="/contact"
+            className="mt-8 inline-block rounded-md bg-teal-700 px-8 py-3 text-sm font-semibold text-white hover:bg-teal-800 transition-colors"
+          >
+            Get in Touch
+          </Link>
+        </div>
+      </section>
+
+      {/* Three Pillars */}
+      <section className="py-16">
+        <div className="mx-auto max-w-5xl px-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="rounded-lg border border-gray-200 p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                Site-Specific Challenges
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Every engineering and environmental project has site-specific
+                challenges to identify. Understanding the unique conditions of
+                each site is the foundation of effective environmental
+                consulting.
+              </p>
+            </div>
+            <div className="rounded-lg border border-gray-200 p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                Expert Assessment
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Expert consulting requires accurate project assessment and
+                understanding of underlying risks. Our team brings decades of
+                experience and specialized credentials to every engagement.
+              </p>
+            </div>
+            <div className="rounded-lg border border-gray-200 p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                Cooperative Outcomes
+              </h3>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Successful outcomes require technical understanding and
+                cooperation among all stakeholders. We work collaboratively with
+                clients, regulators, and communities to achieve lasting results.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Banner */}
+      <section className="bg-gray-50 py-12">
+        <div className="mx-auto max-w-5xl px-6 text-center">
+          <h2 className="text-2xl font-bold text-gray-900">
+            Ready to discuss your project?
+          </h2>
+          <p className="mt-3 text-gray-600">
+            Call us at{" "}
+            <a
+              href="tel:510-307-9943"
+              className="text-teal-700 font-semibold hover:underline"
+            >
+              510-307-9943
+            </a>{" "}
+            or{" "}
+            <Link
+              to="/contact"
+              className="text-teal-700 font-semibold hover:underline"
+            >
+              send us a message
+            </Link>
+            .
+          </p>
+        </div>
+      </section>
+    </>
   );
 }
