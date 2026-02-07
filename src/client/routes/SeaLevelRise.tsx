@@ -31,6 +31,11 @@ export default function SeaLevelRise() {
           <h2 className="text-xl font-semibold text-gray-900 mb-4">
             Real-Time Flood and Groundwater Sensors
           </h2>
+          <img
+            src="/demo/images/slr-flood-sensor.jpg"
+            alt="Real-time flood sensor installation with monitoring equipment mounted on a post near a waterway"
+            className="w-full rounded-lg mb-4"
+          />
           <p className="text-sm text-gray-600 leading-relaxed mb-4">
             Clearwater designs and installs real-time water sensors with flood
             alerts to better understand sea level rise.

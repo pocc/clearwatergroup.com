@@ -9,6 +9,16 @@ export default function Team() {
           <h2 className="text-2xl font-semibold text-gray-900 mb-6">
             Management
           </h2>
+          <div className="mb-8">
+            <img
+              src="/demo/images/olivia-james-jacobs.jpg"
+              alt="Olivia and James Jacobs, co-founders of Clearwater Group"
+              className="w-full max-w-md rounded-lg shadow-sm"
+            />
+            <p className="text-sm text-gray-500 mt-2">
+              Olivia and James Jacobs, co-founders
+            </p>
+          </div>
           <div className="space-y-8">
             {/* Olivia Jacobs */}
             <div className="rounded-lg border border-gray-200 p-8">
@@ -49,21 +59,30 @@ export default function Team() {
 
             {/* James Jacobs */}
             <div className="rounded-lg border border-gray-200 p-8">
-              <h3 className="text-xl font-semibold text-gray-900">
-                James A. Jacobs, Ph.D., P.G., C.H.G., C.P.G., C.Pet.G., FGS
-              </h3>
-              <p className="text-teal-700 text-sm font-medium mt-1">
-                Principal Geologist | ToR QSP/QSD, ToR QISP
-              </p>
-              <p className="text-gray-500 text-xs mt-1 mb-4">
-                <a
-                  href="/team/JJ_CV_230219.pdf"
-                  className="text-teal-700 hover:underline"
-                >
-                  View CV (PDF)
-                </a>
-              </p>
-              <div className="text-sm text-gray-600 space-y-3 leading-relaxed">
+              <div className="flex flex-col sm:flex-row gap-6">
+                <img
+                  src="/demo/images/jim-jacobs.png"
+                  alt="James A. Jacobs, Ph.D., Principal Geologist"
+                  className="w-32 h-40 object-cover rounded-lg flex-shrink-0"
+                />
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900">
+                    James A. Jacobs, Ph.D., P.G., C.H.G., C.P.G., C.Pet.G., FGS
+                  </h3>
+                  <p className="text-teal-700 text-sm font-medium mt-1">
+                    Principal Geologist | ToR QSP/QSD, ToR QISP
+                  </p>
+                  <p className="text-gray-500 text-xs mt-1 mb-4">
+                    <a
+                      href="/team/JJ_CV_230219.pdf"
+                      className="text-teal-700 hover:underline"
+                    >
+                      View CV (PDF)
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div className="text-sm text-gray-600 space-y-3 leading-relaxed mt-4">
                 <p>
                   James A. Jacobs is Principal Geologist for the company and has
                   been with the firm since 1990. He has over 4 decades of

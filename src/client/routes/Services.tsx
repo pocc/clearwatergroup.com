@@ -12,6 +12,11 @@ export default function Services() {
           <h2 className="text-2xl font-semibold text-gray-900 mb-6">
             Expert Consulting Services
           </h2>
+          <img
+            src="/demo/images/services-research.jpg"
+            alt="Research and investigation — magnifying glass on books"
+            className="w-full h-48 object-cover rounded-lg mb-6"
+          />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="rounded-lg border border-gray-200 p-6">
               <h3 className="font-semibold text-gray-900 mb-2">
@@ -135,6 +140,11 @@ export default function Services() {
           <h2 className="text-2xl font-semibold text-gray-900 mb-6">
             Construction, Oil &amp; Gas and Mining Projects
           </h2>
+          <img
+            src="/demo/images/services-engineering.jpg"
+            alt="Engineering scale ruler on technical drawings"
+            className="w-full h-48 object-cover rounded-lg mb-6"
+          />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="rounded-lg border border-gray-200 p-6">
               <h3 className="font-semibold text-gray-900 mb-2">
@@ -188,6 +198,11 @@ export default function Services() {
           <h2 className="text-2xl font-semibold text-gray-900 mb-6">
             Real Estate Transactions and Land Redevelopment
           </h2>
+          <img
+            src="/demo/images/services-site-map.jpg"
+            alt="Environmental site assessment map showing monitoring well locations and contamination plume"
+            className="w-full h-48 object-cover rounded-lg mb-6"
+          />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="rounded-lg border border-gray-200 p-6">
               <h3 className="font-semibold text-gray-900 mb-2">

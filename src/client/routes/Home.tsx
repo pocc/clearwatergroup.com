@@ -4,8 +4,13 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-slate-800 text-white py-20">
-        <div className="mx-auto max-w-5xl px-6 text-center">
+      <section className="relative bg-slate-800 text-white py-20 overflow-hidden">
+        <img
+          src="/demo/images/hero-golden-gate.jpg"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover opacity-25"
+        />
+        <div className="relative mx-auto max-w-5xl px-6 text-center">
           <span className="inline-block rounded-full bg-teal-700 px-4 py-1 text-xs font-medium uppercase tracking-wider mb-6">
             Since 1990
           </span>
@@ -61,6 +66,15 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* About Image */}
+      <section className="py-0">
+        <img
+          src="/demo/images/nature-canoe.jpg"
+          alt="Pristine lake surrounded by forest — representing environmental stewardship"
+          className="w-full h-64 md:h-80 object-cover"
+        />
       </section>
 
       {/* CTA Banner */}
