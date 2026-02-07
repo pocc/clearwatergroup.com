@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Blue gradient background -->
+  <defs>
+    <linearGradient id="waterGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A90E2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E5A8E;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Water droplet shape -->
+  <path d="M 32 8 C 32 8, 20 25, 20 35 C 20 44, 25 52, 32 52 C 39 52, 44 44, 44 35 C 44 25, 32 8, 32 8 Z"
+        fill="url(#waterGrad)" stroke="#1E5A8E" stroke-width="2"/>
+  <!-- Highlight reflection -->
+  <ellipse cx="28" cy="24" rx="5" ry="8" fill="#B3D9FF" opacity="0.5"/>
+</svg>
