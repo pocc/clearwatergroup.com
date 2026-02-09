@@ -11,17 +11,43 @@ const navLinks = [
   { to: "/sea-level-rise", label: "Sea Level Rise" },
 ];
 
+const pageTitles: Record<string, string> = {
+  "/": "Clearwater Group — Environmental Consulting",
+  "/services": "Services — Clearwater Group",
+  "/team": "Our Team — Clearwater Group",
+  "/books": "Books — Clearwater Group",
+  "/faq": "FAQ — Clearwater Group",
+  "/contact": "Contact — Clearwater Group",
+  "/sea-level-rise": "Sea Level Rise — Clearwater Group",
+};
+
 export default function Layout() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { pathname } = useLocation();
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     setMenuOpen(false);
     window.scrollTo(0, 0);
+    document.title = pageTitles[pathname] || "Clearwater Group";
   }, [pathname]);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 0);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <div className="min-h-screen bg-white flex flex-col">
+      {/* Skip to content */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:bg-teal-700 focus:text-white focus:px-4 focus:py-2 focus:text-sm"
+      >
+        Skip to main content
+      </a>
+
       {/* Top banner */}
       <div className="bg-slate-800 text-white text-center text-sm py-2 px-4">
         Call for a free, no-obligation discussion of your next environmental
@@ -31,8 +57,12 @@ export default function Layout() {
         </a>
       </div>
 
-      {/* Nav */}
-      <header className="border-b border-gray-200 bg-white">
+      {/* Nav — sticky with backdrop blur */}
+      <header
+        className={`sticky top-0 z-40 border-b border-gray-200 bg-white/95 backdrop-blur-sm transition-shadow duration-200 ${
+          scrolled ? "shadow-sm" : ""
+        }`}
+      >
         <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
           <Link to="/" className="flex items-center">
             <img
@@ -43,14 +73,18 @@ export default function Layout() {
           </Link>
 
           {/* Desktop nav */}
-          <div className="hidden md:flex gap-6">
+          <div className="hidden md:flex gap-1">
             {navLinks.map((link) => (
               <NavLink
                 key={link.to}
                 to={link.to}
                 end={link.end}
                 className={({ isActive }) =>
-                  `text-sm ${isActive ? "text-teal-700 font-medium" : "text-gray-600 hover:text-gray-900"}`
+                  `text-sm px-3 py-1.5 rounded-md transition-colors ${
+                    isActive
+                      ? "text-teal-700 bg-teal-50 font-medium"
+                      : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+                  }`
                 }
               >
                 {link.label}
@@ -60,9 +94,10 @@ export default function Layout() {
 
           {/* Mobile hamburger */}
           <button
-            className="md:hidden p-2 text-gray-600"
+            className="md:hidden p-2 text-gray-600 hover:text-gray-900 transition-colors"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
+            aria-expanded={menuOpen}
           >
             <svg
               className="h-6 w-6"
@@ -89,27 +124,37 @@ export default function Layout() {
           </button>
         </nav>
 
-        {/* Mobile menu */}
-        {menuOpen && (
-          <div className="md:hidden border-t border-gray-200 px-6 py-4 flex flex-col gap-3">
-            {navLinks.map((link) => (
-              <NavLink
-                key={link.to}
-                to={link.to}
-                end={link.end}
-                className={({ isActive }) =>
-                  `text-sm ${isActive ? "text-teal-700 font-medium" : "text-gray-600 hover:text-gray-900"}`
-                }
-              >
-                {link.label}
-              </NavLink>
-            ))}
+        {/* Mobile menu — animated slide */}
+        <div
+          className={`md:hidden grid transition-[grid-template-rows] duration-300 ease-out ${
+            menuOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+          }`}
+        >
+          <div className="overflow-hidden">
+            <div className="border-t border-gray-200 px-6 py-4 flex flex-col gap-1">
+              {navLinks.map((link) => (
+                <NavLink
+                  key={link.to}
+                  to={link.to}
+                  end={link.end}
+                  className={({ isActive }) =>
+                    `text-sm px-3 py-2 rounded-md transition-colors ${
+                      isActive
+                        ? "text-teal-700 bg-teal-50 font-medium"
+                        : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
+                    }`
+                  }
+                >
+                  {link.label}
+                </NavLink>
+              ))}
+            </div>
           </div>
-        )}
+        </div>
       </header>
 
       {/* Main content */}
-      <main className="flex-1">
+      <main id="main-content" className="flex-1">
         <Outlet />
       </main>
 
@@ -140,13 +185,19 @@ export default function Layout() {
               <ul className="text-sm space-y-1.5">
                 <li>
                   Phone:{" "}
-                  <a href="tel:510-307-9943" className="hover:text-white">
+                  <a
+                    href="tel:510-307-9943"
+                    className="hover:text-white transition-colors"
+                  >
                     510-307-9943
                   </a>
                 </li>
                 <li>
                   Alternate:{" "}
-                  <a href="tel:510-590-1099" className="hover:text-white">
+                  <a
+                    href="tel:510-590-1099"
+                    className="hover:text-white transition-colors"
+                  >
                     510-590-1099
                   </a>
                 </li>
@@ -155,7 +206,7 @@ export default function Layout() {
                   Email:{" "}
                   <a
                     href="mailto:info@clearwatergroup.com"
-                    className="hover:text-white"
+                    className="hover:text-white transition-colors"
                   >
                     info@clearwatergroup.com
                   </a>

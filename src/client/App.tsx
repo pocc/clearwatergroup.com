@@ -7,6 +7,7 @@ import Books from "./routes/Books";
 import FAQ from "./routes/FAQ";
 import Contact from "./routes/Contact";
 import SeaLevelRise from "./routes/SeaLevelRise";
+import NotFound from "./routes/NotFound";
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="faq" element={<FAQ />} />
         <Route path="contact" element={<Contact />} />
         <Route path="sea-level-rise" element={<SeaLevelRise />} />
+        <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
   );

@@ -1,5 +1,12 @@
 import { Link } from "react-router";
 
+const stats = [
+  { label: "Years Experience", value: "35+" },
+  { label: "Projects Completed", value: "1,000+" },
+  { label: "Technical Books", value: "5" },
+  { label: "States Licensed", value: "9" },
+];
+
 export default function Home() {
   return (
     <>
@@ -29,11 +36,25 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Stats */}
+      <section className="border-b border-gray-200">
+        <div className="mx-auto max-w-5xl px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-gray-200">
+            {stats.map((stat) => (
+              <div key={stat.label} className="py-6 text-center">
+                <p className="text-2xl font-bold text-teal-700">{stat.value}</p>
+                <p className="text-xs text-gray-500 mt-1">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Three Pillars */}
       <section className="py-16">
         <div className="mx-auto max-w-5xl px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="rounded-lg border border-gray-200 p-6">
+            <div className="rounded-lg border border-gray-200 p-6 hover:border-teal-200 hover:shadow-sm transition-all">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
                 Site-Specific Challenges
               </h3>
@@ -44,7 +65,7 @@ export default function Home() {
                 consulting.
               </p>
             </div>
-            <div className="rounded-lg border border-gray-200 p-6">
+            <div className="rounded-lg border border-gray-200 p-6 hover:border-teal-200 hover:shadow-sm transition-all">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
                 Expert Assessment
               </h3>
@@ -54,7 +75,7 @@ export default function Home() {
                 experience and specialized credentials to every engagement.
               </p>
             </div>
-            <div className="rounded-lg border border-gray-200 p-6">
+            <div className="rounded-lg border border-gray-200 p-6 hover:border-teal-200 hover:shadow-sm transition-all">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
                 Cooperative Outcomes
               </h3>
