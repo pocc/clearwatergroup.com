@@ -18,12 +18,13 @@ export default function Contact() {
     };
 
     try {
-      const res = await fetch("/demo/api/contact", {
+      const res = await fetch("https://formsubmit.co/ajax/oj@clearwatergroup.com", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({ ...data, _subject: `Contact form: ${data.name}`, _replyto: data.email }),
       });
-      if (!res.ok) throw new Error("Failed to send");
+      const result = ((await res.json()) as { success: string });
+      if (result.success !== "true") throw new Error("Failed to send");
       setStatus("sent");
     } catch {
       setStatus("error");
@@ -73,17 +74,13 @@ export default function Contact() {
                 </dd>
               </div>
               <div>
-                <dt className="font-medium text-gray-900">Fax</dt>
-                <dd className="mt-1">510-232-2823</dd>
-              </div>
-              <div>
                 <dt className="font-medium text-gray-900">Email</dt>
                 <dd className="mt-1">
                   <a
-                    href="mailto:info@clearwatergroup.com"
+                    href="mailto:oj@clearwatergroup.com"
                     className="text-teal-700 hover:underline"
                   >
-                    info@clearwatergroup.com
+                    oj@clearwatergroup.com
                   </a>
                 </dd>
               </div>
@@ -127,10 +124,10 @@ export default function Contact() {
                     </a>{" "}
                     or emailing{" "}
                     <a
-                      href="mailto:info@clearwatergroup.com"
+                      href="mailto:oj@clearwatergroup.com"
                       className="font-semibold underline"
                     >
-                      info@clearwatergroup.com
+                      oj@clearwatergroup.com
                     </a>
                     .
                   </div>

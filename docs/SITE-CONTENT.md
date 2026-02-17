@@ -188,8 +188,7 @@ All pages share: promotional banner ("Call for a free, no-obligation discussion 
 - **Address:** 229 Tewksbury Ave., Point Richmond, CA 94801 USA
 - **Phone:** 510-307-9943
 - **Alternate:** 510-590-1099
-- **Fax:** 510-232-2823
-- **Email:** info@clearwatergroup.com
+- **Email:** oj@clearwatergroup.com
 - **Hours:** Open 09:00 am - 05:00 pm
 
 **Form:** Email contact ("Drop us a line!"), Newsletter signup, reCAPTCHA protected

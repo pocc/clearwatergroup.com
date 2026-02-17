@@ -6,7 +6,7 @@ export default {
     const url = new URL(request.url);
 
     // API routes — delegate to Hono
-    if (url.pathname.startsWith("/demo/api/")) {
+    if (url.pathname.startsWith("/api/")) {
       return app.fetch(request, env, ctx);
     }
 
@@ -16,12 +16,8 @@ export default {
       return assetResponse;
     }
 
-    // SPA fallback — serve index.html for client-side routing under /demo
-    if (url.pathname === "/demo" || url.pathname.startsWith("/demo/")) {
-      const fallbackUrl = new URL("/demo/index.html", request.url);
-      return env.ASSETS.fetch(new Request(fallbackUrl, request));
-    }
-
-    return assetResponse;
+    // SPA fallback — serve index.html for client-side routing
+    const fallbackUrl = new URL("/index.html", request.url);
+    return env.ASSETS.fetch(new Request(fallbackUrl, request));
   },
 };

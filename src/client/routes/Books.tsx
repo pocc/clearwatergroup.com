@@ -5,7 +5,7 @@ const books = [
     publisher: "Wiley, 2019",
     pages: 576,
     authors: "James A. Jacobs and Stephen M. Testa",
-    image: "/demo/images/book-hydraulic-fracturing.jpg",
+    image: "/images/book-hydraulic-fracturing.jpg",
     description:
       "The authors include an overview of the historical development of hydraulic fracturing and the technology currently employed. The book explores the risk, prevention, and mitigation factors associated with fracturing, along with legal cases, regulatory issues, and data on the cost of recovery. The volume presents audit checklists for gathering critical information and documentation to support the reliability of current environmental conditions related to fracking operations and their community impact.",
   },
@@ -15,7 +15,7 @@ const books = [
     publisher: "McGraw-Hill, 2014",
     pages: 578,
     authors: "Stephen M. Testa and James A. Jacobs",
-    image: "/demo/images/book-oil-spills.jpg",
+    image: "/images/book-oil-spills.jpg",
     description:
       "Highlights the complex nature of assessment, exposure pathway analysis, and sensitive receptor evaluation related to oil spills and gas leaks. Covers sampling methods and remediation of petroleum hydrocarbons, oil spill and gas leak behavior, environmental impact mitigation, engineering techniques, long-term biological and environmental effects, and litigation and cost recovery.",
   },
@@ -24,7 +24,7 @@ const books = [
     publisher: "Wiley, 2014",
     pages: 520,
     authors: "James A. Jacobs, Jay H. Lehr, and Stephen M. Testa",
-    image: "/demo/images/book-acid-mine-drainage.jpg",
+    image: "/images/book-acid-mine-drainage.jpg",
     description:
       "Explores the biogeochemistry of acid mine drainage, rock drainage, and acid sulfate soils. Describes how to predict, prevent, and remediate the environmental impact of acid drainage and the oxidation of sulfides, offering sampling and analytical methods. Readers will discover new approaches for recovering valuable resources from acid mine drainage, including bioleaching. Jacobs co-authored 18 of the 36 chapters.",
   },
@@ -33,7 +33,7 @@ const books = [
     publisher: "CRC Press, 2004",
     pages: 800,
     authors: "Jacques Guertin, James A. Jacobs, and Cynthia P. Avakian",
-    image: "/demo/images/book-chromium.jpg",
+    image: "/images/book-chromium.jpg",
     description:
       "The broad scope of this book fills the need for a comprehensive resource on hexavalent chromium. Features chapters on chromium sources, geology and geochemistry, toxicity, treatment, remediation, legal issues, and recommendations. Brought to the public's attention in the film Erin Brockovich, hexavalent chromium is a larger problem than once thought. Put together by a team of scientists, engineers, regulators, and lawyers.",
   },
@@ -42,7 +42,7 @@ const books = [
     publisher: "CRC Press, 2001",
     pages: 264,
     authors: "James A. Jacobs, Jacques Guertin, and Christy Herron",
-    image: "/demo/images/book-mtbe.jpg",
+    image: "/images/book-mtbe.jpg",
     description:
       "One of the first books written about MTBE, providing a historic view from 2001. Examines MTBE as a technical solution designed to reduce air emissions from vehicles, and focuses on health effects from contaminated water. Covers physical and chemical properties, toxicity, transport and fate in the environment, detection and treatment in soil and groundwater, and environmental policy.",
   },

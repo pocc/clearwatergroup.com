@@ -13,7 +13,7 @@ export default function Home() {
       {/* Hero */}
       <section className="relative bg-slate-800 text-white py-20 overflow-hidden">
         <img
-          src="/demo/images/hero-golden-gate.jpg"
+          src="/images/hero-golden-gate.jpg"
           alt=""
           className="absolute inset-0 w-full h-full object-cover opacity-25"
         />
@@ -92,7 +92,7 @@ export default function Home() {
       {/* About Image */}
       <section className="py-0">
         <img
-          src="/demo/images/nature-canoe.jpg"
+          src="/images/nature-canoe.jpg"
           alt="Pristine lake surrounded by forest — representing environmental stewardship"
           className="w-full h-64 md:h-80 object-cover"
         />

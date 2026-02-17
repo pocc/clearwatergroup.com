@@ -66,7 +66,7 @@ export default function Layout() {
         <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
           <Link to="/" className="flex items-center">
             <img
-              src="/demo/images/logo.png"
+              src="/images/logo.png"
               alt="Clearwater Group — Environmental Services"
               className="h-8 w-auto"
             />
@@ -201,14 +201,13 @@ export default function Layout() {
                     510-590-1099
                   </a>
                 </li>
-                <li>Fax: 510-232-2823</li>
                 <li>
                   Email:{" "}
                   <a
-                    href="mailto:info@clearwatergroup.com"
+                    href="mailto:oj@clearwatergroup.com"
                     className="hover:text-white transition-colors"
                   >
-                    info@clearwatergroup.com
+                    oj@clearwatergroup.com
                   </a>
                 </li>
               </ul>

@@ -11,7 +11,7 @@ export default function Team() {
           </h2>
           <div className="mb-8">
             <img
-              src="/demo/images/olivia-james-jacobs.jpg"
+              src="/images/olivia-james-jacobs.jpg"
               alt="Olivia and James Jacobs, co-founders of Clearwater Group"
               className="w-full max-w-md rounded-lg shadow-sm"
             />
@@ -61,7 +61,7 @@ export default function Team() {
             <div className="rounded-lg border border-gray-200 p-8">
               <div className="flex flex-col sm:flex-row gap-6">
                 <img
-                  src="/demo/images/jim-jacobs.png"
+                  src="/images/jim-jacobs.png"
                   alt="James A. Jacobs, Ph.D., Principal Geologist"
                   className="w-32 h-40 object-cover rounded-lg flex-shrink-0"
                 />

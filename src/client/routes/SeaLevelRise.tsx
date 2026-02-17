@@ -32,7 +32,7 @@ export default function SeaLevelRise() {
             Real-Time Flood and Groundwater Sensors
           </h2>
           <img
-            src="/demo/images/slr-flood-sensor.jpg"
+            src="/images/slr-flood-sensor.jpg"
             alt="Real-time flood sensor installation with monitoring equipment mounted on a post near a waterway"
             className="w-full rounded-lg mb-4"
           />

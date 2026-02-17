@@ -13,7 +13,7 @@ const categories: ServiceCategory[] = [
   {
     title: "Expert Consulting Services",
     image: {
-      src: "/demo/images/services-research.jpg",
+      src: "/images/services-research.jpg",
       alt: "Research and investigation — magnifying glass on books",
     },
     services: [
@@ -85,7 +85,7 @@ const categories: ServiceCategory[] = [
   {
     title: "Construction, Oil & Gas and Mining Projects",
     image: {
-      src: "/demo/images/services-engineering.jpg",
+      src: "/images/services-engineering.jpg",
       alt: "Engineering scale ruler on technical drawings",
     },
     services: [
@@ -119,7 +119,7 @@ const categories: ServiceCategory[] = [
   {
     title: "Real Estate Transactions and Land Redevelopment",
     image: {
-      src: "/demo/images/services-site-map.jpg",
+      src: "/images/services-site-map.jpg",
       alt: "Environmental site assessment map showing monitoring well locations and contamination plume",
     },
     services: [
